@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  camunda:
+    image: camunda/camunda-bpm-platform:7.19.0
+    container_name: camunda
+    environment:
+      - DB_VENDOR=postgres
+      - DB_HOST=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_DATABASE=camunda
+      - CAMUNDA_WEBAPP_ENABLED=true
+      - CAMUNDA_WEBAPP_USER=admin
+      - CAMUNDA_WEBAPP_PASSWORD=admin
+    ports:
+      - "8181:8080"
+    networks:
+      - springbootkeycloak-main_default
+
+networks:
+  springbootkeycloak-main_default:
+    external:
+      name: springbootkeycloak-main_default
