@@ -7,6 +7,7 @@ import org.camunda.bpm.engine.TaskService;
 import org.camunda.bpm.engine.repository.ProcessDefinition;
 import org.camunda.bpm.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,11 +32,14 @@ public class CamundaRestController {
     @Autowired
     private TaskService taskService;
 
+    @Value("${camunda.version}")
+    private String camunda_version;
+
     @GetMapping("/engine")
     public ResponseEntity<Map<String, Object>> getEngineInfo() {
         Map<String, Object> info = new HashMap<>();
         info.put("name", processEngine.getName());
-        info.put("version", "7.19.0"); // Hardcoded version since we know it
+        info.put("version", camunda_version);
         return ResponseEntity.ok(info);
     }
 

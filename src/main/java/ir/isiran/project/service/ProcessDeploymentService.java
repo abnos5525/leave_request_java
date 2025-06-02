@@ -22,11 +22,11 @@ public class ProcessDeploymentService {
     @PostConstruct
     public void deployProcesses() {
         try {
-            // Deploy login process
-            Resource resource = new ClassPathResource("login.bpmn");
+            // Deploy leave process
+            Resource resource = new ClassPathResource("processes/leave_process.bpmn");
             Deployment deployment = repositoryService.createDeployment()
-                .addInputStream("login.bpmn", resource.getInputStream())
-                .name("Login Process Deployment")
+                .addInputStream("leave_process.bpmn", resource.getInputStream())
+                .name("Leave Process Deployment")
                 .deploy();
             
             System.out.println("Deployed process: " + deployment.getName());

@@ -1,0 +1,93 @@
+{
+  "components": [
+    {
+      "label": "employeeName",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1lawc42",
+        "columns": null
+      },
+      "id": "Field_01xe6kr",
+      "key": "employeeName",
+      "defaultValue": "${employeeName}",
+      "readonly": true
+    },
+    {
+      "label": "startDate",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0yvayyx",
+        "columns": null
+      },
+      "id": "Field_1hfem7d",
+      "key": "startDate",
+      "defaultValue": "${startDate}",
+      "readonly": "on"
+    },
+    {
+      "label": "endDate",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0bwerh9",
+        "columns": null
+      },
+      "id": "Field_159omnu",
+      "key": "endDate",
+      "readonly": "on",
+      "defaultValue": "${startDate}"
+    },
+    {
+      "label": "leaveType",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0szgrga",
+        "columns": null
+      },
+      "id": "Field_0ft039h",
+      "key": "leaveType",
+      "readonly": "on",
+      "defaultValue": "${leaveType}"
+    },
+    {
+      "label": "amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1e25rm3",
+        "columns": null
+      },
+      "id": "Field_0ytkif2",
+      "key": "amount",
+      "defaultValue": "${amount}"
+    },
+    {
+      "label": "Approve",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1cmsobu",
+        "columns": 4
+      },
+      "id": "Field_1q2dpuk",
+      "properties": {}
+    },
+    {
+      "label": "Reject",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1cmsobu",
+        "columns": null
+      },
+      "id": "Field_0i2bfc0"
+    }
+  ],
+  "type": "default",
+  "id": "manager_submition_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.35.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "schemaVersion": 18
+}

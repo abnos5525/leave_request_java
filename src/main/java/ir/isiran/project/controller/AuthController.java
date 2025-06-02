@@ -5,13 +5,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import io.jsonwebtoken.JwtParser;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
-import ir.isiran.project.dto.LoginResponseDto;
 import ir.isiran.project.util.HttpRequestUtil;
 import javax.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
