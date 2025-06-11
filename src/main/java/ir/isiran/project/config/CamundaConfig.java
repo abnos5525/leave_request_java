@@ -1,5 +1,6 @@
 package ir.isiran.project.config;
 
+import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.RepositoryService;
 import org.camunda.bpm.engine.RuntimeService;
@@ -20,6 +21,9 @@ public class CamundaConfig {
     @Autowired
     private DataSource dataSource;
 
+    @Autowired
+    private ProcessEngine processEngine;
+
     @Bean
     public PlatformTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dataSource);
@@ -34,6 +38,11 @@ public class CamundaConfig {
         config.setJobExecutorActivate(true);
         config.setHistory("full");
         return config;
+    }
+
+    @Bean
+    public IdentityService identityService() {
+        return processEngine.getIdentityService();
     }
 
     @Bean
