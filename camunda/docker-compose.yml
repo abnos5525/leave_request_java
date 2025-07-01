@@ -15,6 +15,7 @@ services:
       - CAMUNDA_WEBAPP_PASSWORD=admin
     ports:
       - "8181:8080"
+    restart: unless-stopped
     networks:
       - springbootkeycloak-main_default
 

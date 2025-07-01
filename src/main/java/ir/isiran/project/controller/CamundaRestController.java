@@ -88,9 +88,8 @@ public class CamundaRestController {
                 Map<String, Object> map = new HashMap<>();
                 map.put("id", task.get("id"));
                 map.put("name", task.get("name"));
-                map.put("assignee", task.get("assignee"));
-                map.put("created", task.get("createTime"));
-                map.put("variables", flatVariables); // Now contains employeeName, leaveType, etc.
+                map.put("created", task.get("created"));
+                map.put("variables", flatVariables);
 
                 result.add(map);
             }
