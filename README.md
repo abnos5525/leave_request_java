@@ -10,7 +10,7 @@ Built with Spring Boot, Camunda workflow engine, Keycloak authentication, and Sw
   - View request history
 - **Manager Functions**:
   - Approve/reject pending requests
-  - 
+
 ### Prerequisites
 
 - Java 17+
